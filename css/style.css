@@ -63,6 +63,7 @@
   height: calc(100vh);
 }
 .home img {
+   background-image:url(/image/background.jpg);
    width: 100%;
   }
 .text {
