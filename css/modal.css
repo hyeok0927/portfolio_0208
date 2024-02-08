@@ -1,0 +1,101 @@
+body.scrollfix{
+    overflow-y: hidden;
+}
+.home{
+    height: 100vh;
+    position: relative;
+    background-color: antiquewhite;
+}
+.section-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+}
+.work{
+    padding: 15rem 0;
+}
+.work-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 0%;
+}
+.work-list li{
+    width: calc(100% / 2);
+    position: relative;
+    cursor: pointer;
+}
+.work-list li::after{
+    content: "";
+    padding-bottom: 56.25%;
+    display: block;
+}
+.work-list li .thumb-img{
+    padding: 30px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.work-list li .thumb-img img{
+    width: 100%;
+    height: 100%;
+}
+.work-list li .text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+.work-list li:hover .text{
+    opacity: 1;
+}
+.modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0,.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.modal.active{
+    height: 100%;
+}
+.modal-cont{
+    width: 95%;
+    max-width: 1000px;
+    position: relative;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.modal-cont.active{
+    transform: scale(1);
+}
+.modal-cont::after{
+    content: "";
+    padding-bottom: 56.25%;
+    display: block;
+}
+.modal-cont iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
