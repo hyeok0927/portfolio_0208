@@ -63,7 +63,6 @@
   height: calc(100vh);
 }
 video {
-  background-image:url(/image/background.mp4);
   width: 100%;
 
  }
