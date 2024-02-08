@@ -59,10 +59,10 @@
 }
  /* home */
 .home{
+  background-color: #86B6F6;
   height: calc(100vh);
 }
-video {
-   background-color: #86B6F6;
+.home img {
    width: 100%;
 
   }
